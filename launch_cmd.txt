@@ -1,0 +1,47 @@
+Map my world?
+
+
+ 1. Launch the robot with map and rviz
+
+$ cd /home/robond/ws_map_my_world
+$ source devel/setup.bash
+$ roslaunch my_robot world.launch
+
+
+ 2. Launch Mapping
+
+$ cd /home/robond/ws_map_my_world
+$ roslaunch my_robot mapping.launch
+
+
+	 2. After Mapping: Launch Localization
+
+	$ cd /home/robond/ws_map_my_world
+	$ source devel/setup.bash
+	$ roslaunch my_robot localization.launch
+
+
+ 3. Launch Teleop to move the robot
+
+$ cd /home/robond/ws_map_my_world
+$ source devel/setup.bash
+$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+	---------------------------
+	Moving around:
+	   u    i    o
+	   j    k    l
+	   m    ,    .
+
+	q/z : increase/decrease max speeds by 10%
+	w/x : increase/decrease only linear speed by 10%
+	e/c : increase/decrease only angular speed by 10%
+	anything else : stop
+
+
+ 4.  Mapping data base
+
+$ rtabmap-databaseViewer ~/.ros/rtabmap.db
+
+
+
